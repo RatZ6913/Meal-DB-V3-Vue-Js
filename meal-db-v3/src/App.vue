@@ -13,4 +13,5 @@ import FooterView from './views/FooterView.vue';
 
 <style lang="scss">
 @import './assets/style/main.scss';
+
 </style>

@@ -1,5 +1,7 @@
 <template>
-  <h1>Page Meals</h1>
+  <main>
+    <h1>Page Meals</h1>
+  </main>
 </template>
 
 

@@ -1,9 +1,13 @@
 <template>
-  <h1>Page Home</h1>
+  <main>
+    <h1>ICI PAGE PRINCIPALE</h1>
+  </main>
 </template>
 
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+
+</script>
 
 
 <style scoped lang="scss"></style>

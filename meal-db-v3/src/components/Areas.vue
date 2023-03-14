@@ -1,5 +1,7 @@
 <template>
-  <h1>Page Areas</h1>
+  <main>
+    <h1>Page Areas</h1>
+  </main>
 </template>
 
 
