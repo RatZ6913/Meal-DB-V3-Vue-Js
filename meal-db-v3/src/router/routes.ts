@@ -1,7 +1,7 @@
 import type { RouteRecordRaw } from "vue-router";
-import HomePage from '../components/HomePage.vue';
-import Categories from '../components/Categories.vue';
-import Areas from '../components/Areas.vue';
+import HomePage from '../features/home/components/HomePage.vue';
+import Categories from '../features/categories/components/Categories.vue';
+import Areas from '../features/areas/components/Areas.vue';
 import Meals from '../components/Meals.vue';
 
 export const routes: RouteRecordRaw[] = [
