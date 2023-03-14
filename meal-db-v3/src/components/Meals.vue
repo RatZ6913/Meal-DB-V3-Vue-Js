@@ -1,5 +1,5 @@
 <template>
-  <h1>Page Categories</h1>
+  <h1>Page Meals</h1>
 </template>
 
 

@@ -1,5 +1,5 @@
 <template>
-  <h1>Page Categories</h1>
+  <h1>Page AReas</h1>
 </template>
 
 

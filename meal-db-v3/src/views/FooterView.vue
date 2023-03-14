@@ -1,9 +1,8 @@
 <template>
-  <h1>Page Categories</h1>
+  <h1>JE SUIS LE FOOTER</h1>
 </template>
 
 
 <script setup lang="ts"></script>
-
 
 <style scoped lang="scss"></style>
