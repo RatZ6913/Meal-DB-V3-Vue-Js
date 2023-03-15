@@ -6,7 +6,7 @@ export interface AreasState {
   areas: AreasList[];
 }
 
-export const userAreas = defineStore('areas', {
+export const useAreas = defineStore('areas', {
   state: (): AreasState => ({
     areas: []
   }),

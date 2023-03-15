@@ -19,6 +19,10 @@ const categoriesStore: Store | any = useCategories();
 categoriesStore.getCategory();
 const mealCategory = categoriesStore.categories.meals;
 
+
+
+
+
 </script>
 
 <style scoped lang="scss">
