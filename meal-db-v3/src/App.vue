@@ -1,6 +1,8 @@
 <template>
   <HeaderView />
+  <!-- <Suspense> -->
     <router-view />
+  <!-- </Suspense> -->
   <FooterView />
 </template>
 
@@ -13,5 +15,4 @@ import FooterView from './views/FooterView.vue';
 
 <style lang="scss">
 @import './assets/style/main.scss';
-
 </style>

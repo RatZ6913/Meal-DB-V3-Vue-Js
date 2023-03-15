@@ -1,13 +1,68 @@
 <template>
   <main>
-    <h1>ICI PAGE PRINCIPALE</h1>
+    <section id="container">
+      <h1>Bievenue sur Meals</h1>
+      <img src="@/assets/images/bg-image.jpg">
+    </section>
+
+    <div id="box-meal" v-if="state.display = true">
+      <button class="btn btn-primary" @click="random()">Générer un plat aléatoire</button>
+      <template v-for="meal in state.randomMeal">
+        <template v-for="infoMeal in meal">
+          <p>{{ infoMeal.strMeal }}</p>
+          <img :src="infoMeal.strMealThumb">
+        </template>
+      </template>
+    </div>
   </main>
 </template>
 
-
 <script setup lang="ts">
+import { fetchRandomMeal } from '@/shared/services/meal.service';
+import { reactive } from 'vue';
+
+const state = reactive<{
+  randomMeal: Function;
+  display: boolean;
+}>({
+  randomMeal: String,
+  display: false
+})
+
+async function random() {
+  state.randomMeal = await fetchRandomMeal();
+  state.display = true;
+}
 
 </script>
 
+<style scoped lang="scss">
+main {
+  display: flex;
+  flex-direction: column;
 
-<style scoped lang="scss"></style>
+  #container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+
+    img {
+      width: 35rem;
+      height: 35rem;
+    }
+  }
+
+  #box-meal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+
+    img {
+      width: 250px;
+      height: 250px;
+    }
+  }
+}
+</style>
