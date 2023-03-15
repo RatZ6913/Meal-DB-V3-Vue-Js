@@ -13,3 +13,7 @@ export interface Meal {
 export interface CategoryList {
   categories: string;
 }
+
+export interface AreasList {
+  areas: string;
+}
