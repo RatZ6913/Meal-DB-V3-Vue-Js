@@ -45,6 +45,5 @@ section {
       color: var(--gray-1);
     }
   }
-
 }
 </style>

@@ -7,7 +7,7 @@
       <ul class="d-flex">
         <router-link to="/home">Home</router-link>
         <router-link to="/categories">Categories</router-link>
-        <router-link to="/areas">Areas</router-link>
+        <router-link to="/areas">Areas</router-link> 
         <router-link to="/meals">Meals</router-link>
         <a>Connexion</a>
         <a>Inscription</a>
@@ -18,6 +18,15 @@
 </template>
 
 <script setup lang="ts">
+import { useCategories } from '@/features/categories/store/categoriesStore';
+import { useAreas } from '@/features/areas/store/areasStore'; 
+
+const areasStore: any = useAreas();
+areasStore.getAreas();
+
+const categoriesStore: any = useCategories();
+categoriesStore.getCategory();
+
 </script>
 
 <style scoped lang="scss">

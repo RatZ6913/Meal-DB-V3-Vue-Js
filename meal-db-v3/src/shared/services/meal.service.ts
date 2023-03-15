@@ -1,10 +1,7 @@
-import type { CategoryList } from "../interfaces/meal.interface";
-
 export async function fetchRandomMeal(): Promise<any> {
-  const meals = await (
+  return await (
     await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
   ).json();
-  return meals;
 }
 
 export async function fetchGetCategory(): Promise<any> {
