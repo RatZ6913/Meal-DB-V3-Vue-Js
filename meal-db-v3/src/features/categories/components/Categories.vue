@@ -20,9 +20,6 @@ categoriesStore.getCategory();
 const mealCategory = categoriesStore.categories.meals;
 
 
-
-
-
 </script>
 
 <style scoped lang="scss">

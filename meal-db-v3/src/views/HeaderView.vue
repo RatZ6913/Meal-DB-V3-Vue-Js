@@ -9,9 +9,9 @@
         <router-link to="/categories">Categories</router-link>
         <router-link to="/areas">Areas</router-link> 
         <router-link to="/meals">Meals</router-link>
-        <a>Connexion</a>
-        <a>Inscription</a>
-        <a>Déconnexion</a>
+        <router-link to="/login">Login</router-link>
+        <router-link to="/register">Register</router-link>
+        <router-link to="/disconnect">Disconnect</router-link>
       </ul>
     </nav>
   </header>
