@@ -9,6 +9,12 @@
 </template>
 
 <script setup lang="ts">
+import type { Store } from 'pinia';
+import { useCategories } from '../store/categoriesStore';
+
+const categoriesStore: Store | any = useCategories();
+categoriesStore.getCategoryOne();
+console.log(categoriesStore.getCategoryOne());
 
 </script>
 

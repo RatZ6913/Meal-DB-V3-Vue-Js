@@ -18,7 +18,7 @@ export async function fetchGetAreas(): Promise<AreasList[]> {
   ).json();
 }
 
-export async function fetchByCategory(category: string): Promise<Category> {
+export async function fetchByCategory(category: string): Promise<Category['category']> {
   return await (
     await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
   ).json();
