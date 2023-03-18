@@ -11,7 +11,7 @@
     </section>
 
     <article>
-      <Category v-if="categoriesStore.display" :name-cat="categoriesStore.nameCat"/>
+      <Category v-if="categoriesStore.display" :categoriesStore="categoriesStore" />
     </article>
   </main>
 </template>
@@ -24,9 +24,10 @@ import Category from './Category.vue';
 const categoriesStore: Store | any = useCategories();
 const mealCategory = categoriesStore.categories.meals;
 
-function nameOfThisCategory(nameCat: string) {
+function nameOfThisCategory(nameCat: string): void {
   categoriesStore.nameCat = nameCat;
   categoriesStore.display = true;
+  categoriesStore.getCategoryOne(nameCat);
 }
 
 </script>

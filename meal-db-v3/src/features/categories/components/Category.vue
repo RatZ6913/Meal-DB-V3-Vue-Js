@@ -2,24 +2,23 @@
   <article class="mt-20">
     <h2 class=".text-align-center">Voice les plats de : </h2>
     <div>
-      <p>{{ nameCat }}</p>
-      <!-- <img src="@/assets/images/world.jpg" alt="image ici"> -->
+      <button></button>
     </div>
   </article>
 </template>
 
 <script setup lang="ts">
+import { watchEffect } from 'vue';
 
 const props = defineProps({
-  nameCat: {
-    type: String,
-    required: true,
-  },
+  categoriesStore: CategoryList as () => any,
 });
 
+watchEffect(() => {
+  const mealOfCategory = props.categoriesStore.category;
+  console.log(mealOfCategory);
+});
 
 </script>
 
-<style scoped lang="scss">
-
-</style>
+<style scoped lang="scss"></style>
