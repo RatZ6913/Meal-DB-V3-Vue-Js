@@ -3,10 +3,14 @@ export interface RandomMeal {
 }
 
 export interface CategoryList {
-  categories: string;
+  categories: string[];
   display: boolean;
 }
 
 export interface AreasList {
   areas: string;
+}
+
+export interface Category {
+  category: [];
 }

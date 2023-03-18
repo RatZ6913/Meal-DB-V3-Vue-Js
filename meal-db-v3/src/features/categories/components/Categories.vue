@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main class="d-flex flex-column align-items-center">
     <section id="cat-content" class="d-flex flex-column justify-content-center">
       <h1>Voici les différents catégories</h1>
       <div>
@@ -23,7 +23,6 @@ import Category  from './Category.vue';
 const categoriesStore: Store | any = useCategories();
 categoriesStore.getCategory();
 const mealCategory = categoriesStore.categories.meals;
-
 
 </script>
 
