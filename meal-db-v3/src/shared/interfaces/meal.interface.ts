@@ -12,6 +12,7 @@ export interface Meal {
 
 export interface CategoryList {
   categories: string;
+  display: boolean;
 }
 
 export interface AreasList {

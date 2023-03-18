@@ -4,11 +4,13 @@ import { fetchGetCategory } from "@/shared/services/meal.service";
 
 export interface CategoryState {
   categories: CategoryList[];
+  display: Boolean;
 }
 
 export const useCategories = defineStore('categories', {
   state: (): CategoryState => ({
-    categories: []
+    categories: [],
+    display: false
   }),
   actions: {
     async getCategory(): Promise<void> {

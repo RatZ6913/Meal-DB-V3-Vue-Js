@@ -1,8 +1,8 @@
 <template>
   <HeaderView />
-  <!-- <Suspense> -->
+  <Suspense>
     <router-view />
-  <!-- </Suspense> -->
+  </Suspense>
   <FooterView />
 </template>
 

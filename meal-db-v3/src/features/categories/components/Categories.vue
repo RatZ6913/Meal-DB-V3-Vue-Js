@@ -1,12 +1,16 @@
 <template>
   <main>
-    <section class="d-flex flex-column justify-content-center">
+    <section id="cat-content" class="d-flex flex-column justify-content-center">
       <h1>Voici les différents catégories</h1>
       <div>
         <template v-for="getCat in mealCategory">
-          <button class="btn m-10"> {{ getCat.strCategory }}</button>
+          <button  class="btn m-10"> {{ getCat.strCategory }}</button>
         </template>
       </div>
+    </section>
+
+    <section>
+      <Category v-if="categoriesStore.display"/>
     </section>
   </main>
 </template>
@@ -14,6 +18,7 @@
 <script setup lang="ts">
 import type { Store } from 'pinia';
 import { useCategories } from '../store/categoriesStore';
+import Category  from './Category.vue';
 
 const categoriesStore: Store | any = useCategories();
 categoriesStore.getCategory();
@@ -23,7 +28,7 @@ const mealCategory = categoriesStore.categories.meals;
 </script>
 
 <style scoped lang="scss">
-section {
+#cat-content {
   width: 60%;
   margin: auto;
 
