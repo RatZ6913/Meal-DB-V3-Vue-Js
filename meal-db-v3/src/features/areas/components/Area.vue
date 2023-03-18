@@ -1,8 +1,12 @@
 <template>
   <article class="d-flex flex-row flex-wrap justify-content-center">
     <h2 class="text-align-center mt-20">Voice les plats de : {{ areasStore.nameArea }}</h2>
+
     <template v-for="getMeal in mealByArea">
-      <!-- <p>{{ getMeal.strArea }}</p> -->
+      <div class="m-20 d-flex flex-wrap flex-column">
+        <p>{{ getMeal.strMeal }}</p>
+        <img :src="getMeal.strMealThumb">
+      </div>
     </template>
   </article>
 </template>
@@ -18,11 +22,44 @@ const props = defineProps({
 const mealByArea = ref<Meal[]>([]);
 
 watchEffect(() => {
-  mealByArea.value = props.areasStore.areas.meals;
+  mealByArea.value = props.areasStore.area.meals;
   console.log(mealByArea);
 
 });
 
 </script>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+article {
+  width: 60%;
+  margin: 50px auto;
+  border-top: 1px solid black;
+
+  h2 {
+    width: 100%;
+  }
+
+  div {
+    justify-content: space-between;
+    max-width: 150px;
+    background-color: var(--primary-1);
+    box-shadow: 1px 2px 2px var(--gray-3);
+
+    &:hover {
+      box-shadow: 2px 3px 2px 1px var(--gray-3);
+    }
+
+    p {
+      text-align: center;
+      margin: auto 0;
+      padding: 5px;
+      color: white;
+    }
+
+    img {
+      background-color: white;
+      padding: 5px;
+    }
+  }
+}
+</style>
