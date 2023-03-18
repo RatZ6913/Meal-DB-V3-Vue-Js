@@ -11,7 +11,7 @@
 import { watchEffect } from 'vue';
 
 const props = defineProps({
-  categoriesStore: CategoryList as () => any,
+  categoriesStore: Object as () => any,
 });
 
 watchEffect(() => {

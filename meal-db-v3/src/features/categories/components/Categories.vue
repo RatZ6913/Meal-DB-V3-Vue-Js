@@ -17,11 +17,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Store } from 'pinia';
 import { useCategories } from '../store/categoriesStore';
 import Category from './Category.vue';
 
-const categoriesStore: Store | any = useCategories();
+const categoriesStore: any = useCategories();
 const mealCategory = categoriesStore.categories.meals;
 
 function nameOfThisCategory(nameCat: string): void {
