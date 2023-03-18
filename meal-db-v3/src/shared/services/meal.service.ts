@@ -1,4 +1,4 @@
-import type { AreasList, Category, CategoryList, RandomMeal } from "../interfaces/meal.interface";
+import type { AreasList, CategoryList, RandomMeal } from "../interfaces/meal.interface";
 
 export async function fetchRandomMeal(): Promise<RandomMeal> {
   return await (
@@ -12,15 +12,21 @@ export async function fetchGetCategory(): Promise<CategoryList['categories']> {
   ).json();
 }
 
-export async function fetchGetAreas(): Promise<AreasList[]> {
+export async function fetchByCategory(category: string): Promise<CategoryList['category']> {
+  return await (
+    await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+  ).json();
+}
+
+export async function fetchGetAreas(): Promise<AreasList['areas']> {
   return await (
     await fetch("https://www.themealdb.com/api/json/v1/1/list.php?a=list")
   ).json();
 }
 
-export async function fetchByCategory(category: string): Promise<Category['category']> {
+export async function fetchByArea(country: string): Promise<AreasList['area']> {
   return await (
-    await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+    await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${country}`)
   ).json();
 }
 

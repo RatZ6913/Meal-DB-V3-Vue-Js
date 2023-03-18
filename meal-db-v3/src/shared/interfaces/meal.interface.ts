@@ -17,9 +17,7 @@ export interface CategoryList {
 }
 
 export interface AreasList {
-  areas: string;
-}
-
-export interface Category {
-  category: string[];
+  areas: string[];
+  area: string[];
+  display: boolean;
 }

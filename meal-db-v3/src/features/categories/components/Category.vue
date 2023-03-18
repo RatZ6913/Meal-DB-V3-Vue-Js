@@ -1,6 +1,6 @@
 <template>
-  <article class="mt-20 d-flex flex-row flex-wrap justify-content-center">
-    <h2 class="text-align-center">Voice les plats de : {{ categoriesStore.nameCat }}</h2>
+  <article class="d-flex flex-row flex-wrap justify-content-center">
+    <h2 class="text-align-center mt-20">Voice les plats de : {{ categoriesStore.nameCat }}</h2>
 
     <template v-for="getMeal in mealOfCategory">
       <div class="m-20 d-flex flex-wrap flex-column">
@@ -30,7 +30,8 @@ watchEffect(() => {
 <style scoped lang="scss">
 article {
   width: 60%;
-  margin: auto;
+  margin: 50px auto;
+  border-top: 1px solid black;
 
   h2 {
     width: 100%;
@@ -41,6 +42,10 @@ article {
     max-width: 150px;
     background-color: var(--danger-1);
     box-shadow: 1px 2px 2px var(--gray-3);
+
+    &:hover {
+      box-shadow: 2px 3px 2px 1px var(--gray-3);
+    }
 
     p {
       text-align: center;
