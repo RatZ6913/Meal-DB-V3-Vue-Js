@@ -37,8 +37,22 @@ article {
   }
 
   div {
+    justify-content: space-between;
     max-width: 150px;
-    background-color: var(--gray-2);
+    background-color: var(--danger-1);
+    box-shadow: 1px 2px 2px var(--gray-3);
+
+    p {
+      text-align: center;
+      margin: auto 0;
+      padding: 5px;
+      color: white;
+    }
+
+    img {
+      background-color: white;
+      padding: 5px;
+    }
   }
 }
 </style>

@@ -46,8 +46,17 @@ function nameOfThisCategory(nameCat: string): void {
 
     button {
       width: 250px;
-      background-color: var(--gray-3);
+      background-color: var(--danger-2);
       color: white;
+      &:nth-child(odd){
+      background-color: #903434;
+      }
+      &:last-child {
+      background-color: #903434;
+      }
+      &:hover {
+        background-color: var(--danger-1);
+      }
     }
   }
 }
