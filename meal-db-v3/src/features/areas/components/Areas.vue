@@ -17,7 +17,6 @@ import type { Store } from 'pinia';
 import { useAreas } from '../store/areasStore';
 
 const areasStore: Store | any = useAreas();
-areasStore.getAreas();
 const mealAreas = areasStore.areas.meals;
 
 </script>

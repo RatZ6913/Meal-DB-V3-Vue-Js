@@ -4,15 +4,15 @@
       <h1>Voici les différents catégories</h1>
       <div class="d-flex flex-row justify-content-space-around flex-wrap">
         <template v-for="getCat in mealCategory">
-          <button @click="categoriesStore.display = true" class="btn m-10">
+          <button @click="nameOfThisCategory(getCat.strCategory)" class="btn m-10">
             {{ getCat.strCategory }}</button>
         </template>
       </div>
     </section>
 
-    <section>
-      <Category v-if="categoriesStore.display" />
-    </section>
+    <article>
+      <Category v-if="categoriesStore.display" :name-cat="categoriesStore.nameCat"/>
+    </article>
   </main>
 </template>
 
@@ -22,8 +22,12 @@ import { useCategories } from '../store/categoriesStore';
 import Category from './Category.vue';
 
 const categoriesStore: Store | any = useCategories();
-categoriesStore.getCategory();
 const mealCategory = categoriesStore.categories.meals;
+
+function nameOfThisCategory(nameCat: string) {
+  categoriesStore.nameCat = nameCat;
+  categoriesStore.display = true;
+}
 
 </script>
 

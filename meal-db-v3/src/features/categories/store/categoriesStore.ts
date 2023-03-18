@@ -5,6 +5,7 @@ import { fetchByCategory, fetchGetCategory } from "@/shared/services/meal.servic
 export interface CategoryState {
   categories: CategoryList['categories'];
   category: CategoryList['category'];
+  nameCat: string | null;
   display: CategoryList['display'];
 }
 
@@ -12,6 +13,7 @@ export const useCategories = defineStore('categories', {
   state: (): CategoryState => ({
     categories: [],
     category: [],
+    nameCat: null,
     display: false
   }),
   actions: {
