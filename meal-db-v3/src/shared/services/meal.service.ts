@@ -1,14 +1,15 @@
-export async function fetchRandomMeal(): Promise<any> {
+import type { CategoryList, RandomMeal } from "../interfaces/meal.interface";
+
+export async function fetchRandomMeal(): Promise<RandomMeal> {
   return await (
     await fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
   ).json();
 }
 
-export async function fetchGetCategory(): Promise<any> {
+export async function fetchGetCategory(): Promise<CategoryList[]> {
   return await (
     await fetch("https://www.themealdb.com/api/json/v1/1/list.php?c=list")
   ).json();
-  
 }
 
 export async function fetchGetAreas(): Promise<any> {
@@ -17,6 +18,11 @@ export async function fetchGetAreas(): Promise<any> {
   ).json();
 }
 
+export async function fetchByCategory(category: string): Promise<any> {
+  return await (
+    await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`)
+  ).json();
+}
 
 // export async function fetchMealsByLetters(letters: string): Promise<any> {
 //   const meals = await (

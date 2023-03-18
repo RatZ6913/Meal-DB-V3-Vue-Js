@@ -4,7 +4,7 @@
       <h1>Voici les différents catégories</h1>
       <div>
         <template v-for="getCat in mealCategory">
-          <button  class="btn m-10"> {{ getCat.strCategory }}</button>
+          <button @click="categoriesStore.display = true" class="btn m-10"> {{ getCat.strCategory }}</button>
         </template>
       </div>
     </section>

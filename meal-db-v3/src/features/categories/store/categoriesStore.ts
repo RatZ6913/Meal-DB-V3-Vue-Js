@@ -4,7 +4,7 @@ import { fetchGetCategory } from "@/shared/services/meal.service";
 
 export interface CategoryState {
   categories: CategoryList[];
-  display: Boolean;
+  display: boolean;
 }
 
 export const useCategories = defineStore('categories', {

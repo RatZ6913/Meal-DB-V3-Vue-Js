@@ -1,7 +1,13 @@
 <template>
-  <h1>Juste CATEGORY</h1>
+  <div>
+    <h2>Voice les plats de : </h2>
+  </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
 
-<style scoped lang="scss"></style>
+</script>
+
+<style scoped lang="scss">
+
+</style>

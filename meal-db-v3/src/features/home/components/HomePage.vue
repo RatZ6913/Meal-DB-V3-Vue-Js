@@ -18,18 +18,19 @@
 </template>
 
 <script setup lang="ts">
+import type { RandomMeal } from '@/shared/interfaces/meal.interface';
 import { fetchRandomMeal } from '@/shared/services/meal.service';
 import { reactive } from 'vue';
 
 const state = reactive<{
-  randomMeal: Function;
+  randomMeal: RandomMeal | Function;
   display: boolean;
 }>({
-  randomMeal: String,
+  randomMeal: Function,
   display: false
 })
 
-async function random() {
+async function random(): Promise<void> {
   state.randomMeal = await fetchRandomMeal();
   state.display = true;
 }
