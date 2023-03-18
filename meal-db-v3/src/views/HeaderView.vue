@@ -1,6 +1,6 @@
 <template>
   <header>
-    <nav class="d-flex align-items-center mb-20">
+    <nav class="d-flex align-items-center mb-20 justify-content-space-around">
       <figure>
         <img src="@/assets/images/logo.jpg" alt="logo">
       </figure>
@@ -36,8 +36,6 @@ header {
   background-color: var(--primary-2);
 
   nav {
-    justify-content: space-around;
-
     figure {
       margin: 0;
       

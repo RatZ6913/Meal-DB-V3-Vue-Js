@@ -2,7 +2,7 @@
   <main class="d-flex flex-column align-items-center">
     <section id="cat-content" class="d-flex flex-column justify-content-center">
       <h1>Voici les différents catégories</h1>
-      <div>
+      <div class="d-flex flex-row justify-content-space-around flex-wrap">
         <template v-for="getCat in mealCategory">
           <button @click="categoriesStore.display = true" class="btn m-10">
             {{ getCat.strCategory }}</button>
@@ -37,10 +37,6 @@ const mealCategory = categoriesStore.categories.meals;
   }
 
   div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
 

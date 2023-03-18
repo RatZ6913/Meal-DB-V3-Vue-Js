@@ -72,6 +72,12 @@
     background-color: var(--gray-2);
   }
 
+  // Classes utilitaires : Text 
+
+  .text-align-center {
+    text-align: center;
+  }
+
   // Classes utilitaires : Flex
   
   .d-flex {
@@ -93,9 +99,17 @@
   .justify-content-space-between {
     justify-content: space-between;
   }
+
+  .justify-content-space-around {
+    justify-content: space-around;
+  }
   
   .align-items-center {
     align-items: center;
+  }
+
+  .flex-wrap {
+    flex-wrap: wrap;
   }
   
   .flex-fill {
@@ -179,7 +193,6 @@
     font-weight: 500;
     transition: background-color 0.2s;
   }
-  
   
   .btn-primary {
     background-color: var(--primary-1);

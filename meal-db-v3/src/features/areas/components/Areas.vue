@@ -1,9 +1,9 @@
 <template>
   <main>
     <section class="d-flex flex-column justify-content-center">
-      <h1>Voici les différents zones</h1>
+      <h1 class="text-align-center">Voici les différents zones</h1>
 
-      <div>
+      <div class="d-flex flex-row justify-content-space-around flex-wrap">
         <template v-for="getArea in mealAreas">
           <button class="btn m-10">{{ getArea.strArea }}</button>
         </template>
@@ -27,15 +27,7 @@ section {
   width: 60%;
   margin: auto;
 
-  h1 {
-    text-align: center;
-  }
-
   div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
     width: 80%;
     margin: 0 auto;
 

@@ -1,11 +1,11 @@
 <template>
-  <main>
-    <section id="container">
+  <main class="d-flex flex-column">
+    <section id="container" class="d-flex flex-column align-items-center">
       <h1>Bievenue sur Meals</h1>
       <img src="@/assets/images/bg-image.jpg">
     </section>
 
-    <div id="box-meal" v-if="state.display = true">
+    <div id="box-meal" class="d-flex flex-column align-items-center" v-if="state.display = true">
       <button class="btn btn-primary" @click="random()">Générer un plat aléatoire</button>
       <template v-for="meal in state.randomMeal">
         <template v-for="infoMeal in meal">
@@ -39,13 +39,7 @@ async function random(): Promise<void> {
 
 <style scoped lang="scss">
 main {
-  display: flex;
-  flex-direction: column;
-
   #container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: auto;
 
     img {
@@ -55,9 +49,6 @@ main {
   }
 
   #box-meal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     margin: 1rem auto;
 
     img {
