@@ -7,7 +7,7 @@ import App from './App.vue';
 const router = createRouter({
   history: createWebHistory(),
   routes: routes,
-})
+});
 
 const pinia = createPinia();
 const app = createApp(App);

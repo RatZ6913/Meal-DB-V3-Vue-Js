@@ -4,34 +4,28 @@
       <h1 class="mb-20">Page de connexion</h1>
 
       <form>
-        <input v-model="state.pseudo" type="text" placeholder="Pseudo..."><br>
-        <input v-model="state.email" type="text" placeholder="Email..."><br>
-        <input v-model="state.password" type="text" placeholder="Password..."><br>
+        <input v-model="userStore.users.pseudo" type="text" placeholder="Pseudo..."><br>
+        <input v-model="userStore.users.email" type="text" placeholder="Email..."><br>
+        <input v-model="userStore.users.password" type="text" placeholder="Password..."><br>
+        <input @click.submit="" type="submit">
       </form>
-      <p>{{ state.pseudo }}</p>
-      <p>{{ state.email }}</p>
-      <p>{{ state.password }}</p>
+      <p>{{ userStore.users.pseudo }}</p>
+      <p>{{ userStore.users.email }}</p>
+      <p>{{ userStore.users.password }}</p>
     </section>
   </main>
 </template>
 
 
 <script setup lang="ts">
-import { reactive } from 'vue';
+import { watchEffect } from 'vue';
 import { useUsers } from '../stores/userStore';
 
-const userStore = useUsers();
+const userStore: any = useUsers();
 
-const state = reactive<{
-  users: {}
-}>({
-  users: {}
-});
+watchEffect(userStore.users);
 
-function checkIfUserExist() {
-
-}
-
+console.log(userStore.users);
 
 
 </script>
