@@ -10,7 +10,6 @@
         <router-link to="/areas">Areas</router-link> 
         <router-link to="/meals">Meals</router-link>
         <router-link to="/login">Login</router-link>
-        <router-link to="/register">Register</router-link>
         <router-link to="/disconnect">Disconnect</router-link>
       </ul>
     </nav>

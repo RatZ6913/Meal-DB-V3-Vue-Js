@@ -23,8 +23,6 @@ const mealByArea = ref<Meal[]>([]);
 
 watchEffect(() => {
   mealByArea.value = props.areasStore.area.meals;
-  console.log(mealByArea);
-
 });
 
 </script>
